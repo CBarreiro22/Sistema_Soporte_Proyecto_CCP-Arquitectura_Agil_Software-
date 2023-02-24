@@ -1,6 +1,6 @@
 # MISW4201-202311-Backend-Grupo06
 
-Contexto: 
+Contexto HU02: 
 El objetivo de la visita del vendedor es finalizar con una orden de compra lo más precisa posible. Es decir con un portafolio de productos y una cantidad de productos que sean posibles de surtir por CCP.
 
 ## Reports  
