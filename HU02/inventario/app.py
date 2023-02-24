@@ -23,4 +23,4 @@ api = Api(app)
 api.add_resource(VistaProducto, '/orden/productos/<int:id_orden>')
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True, port=8080)
