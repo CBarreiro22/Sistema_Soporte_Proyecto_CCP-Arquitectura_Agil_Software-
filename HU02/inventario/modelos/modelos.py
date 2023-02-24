@@ -144,7 +144,3 @@ class RutinaSchema(SQLAlchemyAutoSchema):
         load_instance = True
     id = fields.String()
     entrenador = fields.String()
-class Roles:
-    ADMIN = "Administrador"
-    CLIENTE = "Cliente"
-    ENTRENADOR = "Entrenador"

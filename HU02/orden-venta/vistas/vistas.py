@@ -28,7 +28,7 @@ rutina_schema = RutinaSchema()
 class VistaOrden(Resource):
     def post(self, id_orden):
         # Construir la URL de la solicitud post con la variable en el path
-        url = f"http://localhost:8000/otro-servicio/ordenes/{id_orden}"
+        url = f"http://localhost:8000/orden/productos/{id_orden}"
 
         # Realizar la solicitud post al otro servicio
         respuesta = requests.post(url)
