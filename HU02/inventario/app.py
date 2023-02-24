@@ -4,7 +4,7 @@ from flask_restful import Api
 
 from modelos import db
 from vistas import \
-    VistaProducto
+    VistaProducto, VistaMonitor
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dbapp.sqlite'
@@ -21,6 +21,7 @@ cors = CORS(app)
 
 api = Api(app)
 api.add_resource(VistaProducto, '/orden/productos/<int:id_orden>')
+api.add_resource(VistaMonitor, '/ping')
 
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
