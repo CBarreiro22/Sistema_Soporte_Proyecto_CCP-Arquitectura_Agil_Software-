@@ -7,8 +7,8 @@ import hashlib
 from faker import Faker
 
 from modelos import \
-    db, \
-    Producto
+    db
+    #Producto
 
 # producto_schema = ProductoSchema()
 
