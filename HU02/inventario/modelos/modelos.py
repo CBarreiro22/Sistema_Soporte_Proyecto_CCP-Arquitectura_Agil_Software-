@@ -4,11 +4,14 @@ from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 
 db = SQLAlchemy()
 
-class Producto (db.Model):
+
+class Producto(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(128))
     existencia = db.Column(db.Numeric)
-class ProductoSchema (SQLAlchemyAutoSchema):
+
+
+class ProductoSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Producto
         include_relationships = False
