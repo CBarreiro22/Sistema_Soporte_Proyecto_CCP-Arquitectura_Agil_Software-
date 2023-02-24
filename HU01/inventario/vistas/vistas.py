@@ -1,22 +1,20 @@
+import queue
+from ..modelos import db, Inventario, InventarioSchema
+from celery import Celery
 from flask_restful import Resource
-from faker import Faker
 
-from modelos import \
-    db, ProductoSchema, Producto
-
-producto_schema = ProductoSchema()
+inventario_schema = InventarioSchema()
+celery = Celery(__name__, broker='redis://localhost:6379/0')
 
 
-class VistaProducto(Resource):
+@celery.task(name="consultar_inventario_producto")
+def consultar_inventario_producto():
+    pass
 
-    def get(self, id_orden):
-        print("id_orden: ", id_orden)
 
-        producto = Producto( \
-            nombre=Faker().name(),
-            existencia=1
-        )
-        db.session.add(producto)
-        db.session.commit()
-        print("producto_schema: ", producto_schema.dump(producto))
-        return {"resultado": producto_schema.dump(producto)}
+class VistaTablaInventario(Resource):
+    def get(self):
+        result = consultar_inventario_producto.apply_async(
+            queue='inventario_producto')
+        print(result.get())
+        return result.get()
