@@ -145,3 +145,7 @@ cython_debug/
 
 #DataBase TEST
 test.db
+
+# MAC
+
+.DS_Store
