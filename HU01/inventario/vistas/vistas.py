@@ -25,4 +25,7 @@ class VistaTablaInventario(Resource):
             #  id, nombre, precio
             # producto_id, existencia
             # --> id, nombre, precio, existencia
-        return result.get()
+        inventario = result.get()
+        inventario[0]["existencia"]=1111
+        print("************",inventario[0])
+        return inventario
