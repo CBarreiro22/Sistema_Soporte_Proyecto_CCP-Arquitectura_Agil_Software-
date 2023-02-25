@@ -5,7 +5,7 @@ from flask_restful import Api
 
 from modelos import db
 from vistas import \
-    VistaOrden
+    VistaMonitor
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dbapp.sqlite'
@@ -22,9 +22,16 @@ db.create_all()
 cors = CORS(app)
 
 api = Api(app)
-api.add_resource(VistaOrden, '/orden/<int:id_orden>')
+api.add_resource(VistaMonitor, '/orden/<int:id_orden>')
 
 jwt = JWTManager(app)
 
+
+@app
+def mi_funcion():
+    vista_monitor = VistaMonitor()
+    vista_monitor.monitorearInventario()
+
+
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

@@ -1,20 +1,36 @@
+from datetime import time
+
 from flask_restful import Resource
 import requests
 
 
-class VistaOrden(Resource):
-    def post(self, id_orden):
-        # Construir la URL de la solicitud post con la variable en el path
-        url = f"http://127.0.0.1:8080/orden/productos/{id_orden}"
+class VistaMonitor(Resource):
 
-        # Realizar la solicitud get al otro servicio
-        respuesta = requests.get(url)
+    def monitorearInventario(self):
+        """
+        Monitorea la conexión a una dirección IP o host utilizando una API de ping.
+        Muestra un mensaje si la conexión se pierde o se restablece.
+        """
+        estado_anterior = self.pingInventario()
+        while True:
+            estado_actual = self.pingInventario()
+            if estado_actual != estado_anterior:
+                if estado_actual:
+                    print(f"La conexión a Inventario se ha restablecido.")
+                else:
+                    print(f"La conexión a Inventario se ha perdido.")
+            estado_anterior = estado_actual
+            time.sleep(1)
 
-        # Obtener el resultado de la respuesta
-        resultado = respuesta.json()
-
-        # if entrenador is None:
-        #     return {"message:": "el entrenador no existe"}, 404
-
-        # Devolver una respuesta con el resultado
-        return {"resultado": resultado}
+    @staticmethod
+    def pingInventario():
+        """
+        Envía una solicitud GET a una API que realice un ping a una dirección IP o host específico.
+        Devuelve True si la respuesta fue exitosa, False si no.
+        """
+        url = f"http://127.0.0.1:8080/ping"
+        response = requests.get(url)
+        if response.status_code == 200 and "Success" in response.text:
+            return True
+        else:
+            return False
