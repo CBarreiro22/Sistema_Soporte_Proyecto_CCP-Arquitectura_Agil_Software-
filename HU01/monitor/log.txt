@@ -1,0 +1,12 @@
+[2023-02-25 18:02:15.031366]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:06:40.452158]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:06:45.334829]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:06:45.461558]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:06:48.695260]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:06:50.342960]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:06:50.467293]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:06:55.350652]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:06:55.475417]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:06:58.708948]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:07:00.358170]- Falla en la cola de conexion entre inventario/producto
+[2023-02-25 18:07:00.481930]- Falla en la cola de conexion entre inventario/producto
