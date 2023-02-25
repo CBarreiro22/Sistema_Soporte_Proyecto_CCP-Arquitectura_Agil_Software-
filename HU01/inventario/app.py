@@ -1,4 +1,5 @@
-from inventario import create_app
+from threading import Thread
+from inventario import create_app, heartbeat
 from .modelos import db
 from .vistas import VistaTablaInventario
 from flask_restful import Api
@@ -12,3 +13,7 @@ db.create_all()
 
 api = Api(app)
 api.add_resource(VistaTablaInventario, '/inventario-productos')
+
+
+monitor = Thread(target=heartbeat)
+monitor.start()
