@@ -25,7 +25,30 @@ class VistaTablaInventario(Resource):
             #  id, nombre, precio
             # producto_id, existencia
             # --> id, nombre, precio, existencia
+
+        a= {}
+        b=[]
         inventario = result.get()
-        inventario[0]["existencia"]=1111
-        print("************",inventario[0])
-        return inventario
+        l = ['Agua','manzanas']
+        item1 = 0
+        item = 0
+        count=0
+        identificador=0
+        for i in l:
+            for j in inventario:
+                if inventario[item1]['nombre'] == i:
+                    identificador = 1
+                    count = count + 1
+                    a['id']=item
+                    a['precio']=inventario[item1]['precio']
+                    a['existencias']=count
+                    a['nombre']=inventario[item1]['nombre']
+                item1 = item1+1
+            
+            if identificador != 0:
+                b.append(a)
+            identificador=0
+            item1=0
+            item = item+1
+
+        return b
