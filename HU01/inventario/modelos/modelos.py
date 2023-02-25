@@ -1,22 +1,16 @@
 from flask_sqlalchemy import SQLAlchemy
-from marshmallow import fields, Schema
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 
 db = SQLAlchemy()
 
 
-class Producto(db.Model):
+class Inventario(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(128))
+    producto_id = db.Column(db.String(128))
     existencia = db.Column(db.Numeric)
 
 
-class ProductoSchema(SQLAlchemyAutoSchema):
+class InventarioSchema(SQLAlchemyAutoSchema):
     class Meta:
-        model = Producto
-        include_relationships = False
-        include_fk = False
+        model = Inventario
         load_instance = True
-
-    id = fields.String()
-    existencia = fields.String()
