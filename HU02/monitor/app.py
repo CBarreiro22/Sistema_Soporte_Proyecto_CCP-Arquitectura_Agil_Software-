@@ -8,6 +8,7 @@ from vistas import \
     VistaMonitor
 
 app = Flask(__name__)
+vistaMonitor = VistaMonitor()
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dbapp.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'frase-secreta'
@@ -26,11 +27,7 @@ api.add_resource(VistaMonitor, '/orden/<int:id_orden>')
 
 jwt = JWTManager(app)
 
-
-@app
-def mi_funcion():
-    vista_monitor = VistaMonitor()
-    vista_monitor.monitorearInventario()
+vistaMonitor.monitorearInventario()
 
 
 if __name__ == "__main__":

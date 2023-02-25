@@ -26,16 +26,4 @@ class VistaProducto(Resource):
 
 class VistaMonitor(Resource):
     def get(self):
-        """
-        Endpoint que responde a una petición GET o POST y devuelve la misma información recibida.
-        """
-        #url = "https://b3059e7c-ac64-481a-aec0-e6821bbfe850.mock.pstmn.io/echo"
-
-        # Realizar la solicitud get al otro servicio
-        #respuesta = requests.get(url)
-
-        # Obtener el resultado de la respuesta
-        #resultado = respuesta.json()
-
-        #data = request.args if request.method == 'GET' else request.json
         return "Success"

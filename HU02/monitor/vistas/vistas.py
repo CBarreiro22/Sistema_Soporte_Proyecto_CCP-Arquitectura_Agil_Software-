@@ -2,6 +2,7 @@ from datetime import time
 
 from flask_restful import Resource
 import requests
+import time
 
 
 class VistaMonitor(Resource):
@@ -20,7 +21,7 @@ class VistaMonitor(Resource):
                 else:
                     print(f"La conexión a Inventario se ha perdido.")
             estado_anterior = estado_actual
-            time.sleep(1)
+            time.sleep(5)
 
     @staticmethod
     def pingInventario():
@@ -29,8 +30,13 @@ class VistaMonitor(Resource):
         Devuelve True si la respuesta fue exitosa, False si no.
         """
         url = f"http://127.0.0.1:8080/ping"
-        response = requests.get(url)
-        if response.status_code == 200 and "Success" in response.text:
-            return True
-        else:
+        try:
+            response = requests.get(url)
+            if response.status_code == 200 and "Success" in response.text:
+                print(response)
+                return True
+            else:
+                return False
+        except:
             return False
+

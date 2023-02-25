@@ -6,7 +6,9 @@ from modelos import db
 from vistas import \
     VistaProducto, VistaMonitor
 
+
 app = Flask(__name__)
+vistaMonitor = VistaMonitor()
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dbapp.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
