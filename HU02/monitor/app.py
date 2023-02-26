@@ -27,7 +27,8 @@ api.add_resource(VistaMonitor, '/orden/<int:id_orden>')
 
 jwt = JWTManager(app)
 
-vistaMonitor.monitorearInventario()
+vistaMonitor.monitorear()
+
 
 
 if __name__ == "__main__":

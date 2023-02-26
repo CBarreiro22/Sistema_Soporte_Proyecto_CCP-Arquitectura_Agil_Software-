@@ -5,7 +5,7 @@ from flask_restful import Api
 
 from modelos import db
 from vistas import \
-    VistaOrden
+    VistaOrden,VistaMonitor
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dbapp.sqlite'
@@ -23,6 +23,7 @@ cors = CORS(app)
 
 api = Api(app)
 api.add_resource(VistaOrden, '/orden/<int:id_orden>')
+api.add_resource(VistaMonitor, '/ping')
 
 jwt = JWTManager(app)
 
