@@ -16,7 +16,7 @@ class VistaOrden(Resource):
 
         if status_code == 200:
             # Construir la URL de la solicitud post con la variable en el path
-            url = f"http://127.0.0.1:8080/orden/productos/{id_orden}"
+            url = f"http://127.0.0.1:8090/orden/productos/{id_orden}"
 
             # Realizar la solicitud get al otro servicio
             respuesta = requests.get(url)

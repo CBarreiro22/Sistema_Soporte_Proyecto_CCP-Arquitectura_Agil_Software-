@@ -7,10 +7,10 @@ import time
 from modelos import \
     db, LogMonitor
 
-class VistaMonitor(Resource):
-    
-    def monitorear(self):
 
+class VistaMonitor(Resource):
+
+    def monitorear(self):
 
         """
         Monitorea la conexión a una dirección IP o host utilizando una API de ping.
@@ -19,18 +19,16 @@ class VistaMonitor(Resource):
 
         estado_anterior_inventario = True
 
-        estado_anterior_orden_venta =True
+        estado_anterior_orden_venta = True
         while True:
+            estado_actual_inventario = self.ping("http://127.0.0.1:8090/ping")
 
-            estado_actual = self.ping("http://127.0.0.1:8080/ping")
+            self.inventario_ping(estado_actual_inventario, estado_anterior_inventario)
+            estado_anterior_inventario = estado_actual_inventario
 
-            self.inventario_ping(estado_actual, estado_anterior_inventario)
-            estado_anterior_inventario = estado_actual
-
-
-            estado_actual_venta = self.ping("http://127.0.0.1:5000/ping")
-            self.orden_venta_ping(estado_actual_venta, estado_anterior_orden_venta)
-            estado_anterior_orden_venta = estado_actual_venta
+            estado_actual_orden_venta = self.ping("http://127.0.0.1:8070/ping")
+            self.orden_venta_ping(estado_actual_orden_venta, estado_anterior_orden_venta)
+            estado_anterior_orden_venta = estado_actual_orden_venta
 
             time.sleep(5)
 
@@ -42,12 +40,12 @@ class VistaMonitor(Resource):
                 db.session.add(LogMonitor(horaFecha=date_string_ordern_venta, status="Conexion_Reestablecida",
                                           componente=componente_orden_venta))
                 db.session.commit()
-                print(date_string_ordern_venta, f" La conexión a ",componente_orden_venta," se ha restablecido")
+                print(date_string_ordern_venta, f" La conexión a ", componente_orden_venta, " se ha restablecido")
             else:
                 db.session.add(LogMonitor(horaFecha=date_string_ordern_venta, status="Conexion_perdida",
                                           componente=componente_orden_venta))
                 db.session.commit()
-                print(date_string_ordern_venta, f" La conexión a ",componente_orden_venta," se ha perdido ")
+                print(date_string_ordern_venta, f" La conexión a ", componente_orden_venta, " se ha perdido ")
 
     def inventario_ping(self, estado_actual, estado_anterior_inventario):
         componente_inventario = "Inventario"
@@ -57,12 +55,12 @@ class VistaMonitor(Resource):
                 db.session.add(LogMonitor(horaFecha=date_string_inventario, status="Conexion_Reestablecida",
                                           componente=componente_inventario))
                 db.session.commit()
-                print(date_string_inventario, f" La conexión a ",componente_inventario," se ha restablecido.")
+                print(date_string_inventario, f" La conexión a ", componente_inventario, " se ha restablecido.")
             else:
                 db.session.add(LogMonitor(horaFecha=date_string_inventario, status="conexion_perdida",
                                           componente=componente_inventario))
                 db.session.commit()
-                print(date_string_inventario, f" La conexión a ",componente_inventario," se ha perdido.")
+                print(date_string_inventario, f" La conexión a ", componente_inventario, " se ha perdido.")
 
     @staticmethod
     def ping(url):
@@ -70,17 +68,12 @@ class VistaMonitor(Resource):
         Envía una solicitud GET a una API que realice un ping a una dirección IP o host específico.
         Devuelve True si la respuesta fue exitosa, False si no.
         """
-        
+
         try:
             response = requests.get(url)
-            if (response.status_code == 200 and  "Success"  in response.text) :
+            if (response.status_code == 200 and "Success" in response.text):
                 return True
             else:
                 return False
         except:
             return False
-
- 
-   
-        
-
