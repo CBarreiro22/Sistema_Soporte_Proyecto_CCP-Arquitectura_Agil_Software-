@@ -19,3 +19,5 @@
 [2023-02-26 10:40:45.336049]- Falla Componente Inventario
 [2023-02-26 10:40:47.807788]- Falla Componente Inventario
 [2023-02-26 10:40:50.343783]- Falla Componente Inventario
+[2023-02-26 11:17:21.447929]- Falla Componente Inventario
+[2023-02-26 11:17:21.475707]- Falla Componente Inventario

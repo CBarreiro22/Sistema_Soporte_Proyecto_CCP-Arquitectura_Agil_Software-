@@ -1,4 +1,5 @@
 from threading import Thread
+from HU01.monitor.tareas.monitor import enviar_estado_salud
 from producto import create_app, heartbeat
 from .modelos import db
 from flask_restful import Api
@@ -13,3 +14,5 @@ app_context.push()
 # Initialize the database with the application instance
 db.init_app(app)
 db.create_all()
+
+api = Api(app)
