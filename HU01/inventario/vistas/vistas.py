@@ -32,12 +32,8 @@ class VistaTablaInventario(Resource):
         enviar_estado_salud.apply_async(args)
         result = consultar_inventario_producto.apply_async(
             queue='inventario_producto')
-        #  id, nombre, precio
-        # producto_id, existencia
-        # --> id, nombre, precio, existencia
-
-        a = {}
-        b = []
+        information = {}
+        results = []
         inventario = result.get()
         l = ['Agua', 'manzanas']
         item1 = 0
@@ -49,16 +45,16 @@ class VistaTablaInventario(Resource):
                 if inventario[item1]['nombre'] == i:
                     identificador = 1
                     count = count + 1
-                    a['id'] = item
-                    a['precio'] = inventario[item1]['precio']
-                    a['existencias'] = count
-                    a['nombre'] = inventario[item1]['nombre']
+                    information['id'] = item
+                    information['precio'] = inventario[item1]['precio']
+                    information['existencias'] = count
+                    information['nombre'] = inventario[item1]['nombre']
                 item1 = item1+1
 
             if identificador != 0:
-                b.append(a)
+                results.append(information)
             identificador = 0
             item1 = 0
             item = item+1
 
-        return b
+        return results
