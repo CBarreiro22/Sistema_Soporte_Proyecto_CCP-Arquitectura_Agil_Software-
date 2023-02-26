@@ -11,6 +11,8 @@ monitor = Celery(__name__, broker='redis://localhost:6379/2')
 # Initialize global variables for identifying and counting heartbeats
 identificator = 0
 count = 0
+contStatehealthComponentI=0
+ProductoComponentHealth=0
 
 # Define a task called "enviar_estado_salud" to send health status updates
 # to the monitoring system
@@ -18,6 +20,17 @@ count = 0
 def enviar_estado_salud(cliente):
     global identificator
     global count
+    global contStatehealthComponentI
+    global ProductoComponentHealth
+    Component = cliente[27]+cliente[28]+cliente[29]+cliente[30]+cliente[31]+cliente[32]
+
+    # Increment the state health counter for the relevant component
+    ProductoComponentHealth = ProductoComponentHealth+ 1
+    print(ProductoComponentHealth)
+
+     # Increment the state health counter for the relevant component
+    contStatehealthComponentI += 1
+    print(contStatehealthComponentI)
 
     # Check if the heartbeat message is a Request Inventario message
     if(cliente == '********* Request Inventario *********'):
@@ -42,5 +55,27 @@ def enviar_estado_salud(cliente):
         with open('log.txt', 'a+') as file:
             file.write('[' + str(datetime.now()) + ']' + '- Falla en la cola de conexion entre inventario/producto\n')
 
+    # Check if the component is "Inventario" and reset the state health counter if it is
+    if Component == 'Invent':
+        contStatehealthComponentI = 0
+
+
+    # If the state health counter for the "Inventario" component exceeds a threshold,
+    # write a log message indicating a failure in the inventory component
+    if contStatehealthComponentI > 6:
+        with open('logComponenteInventario.txt', 'a+') as file:
+            file.write('[' + str(datetime.now()) + ']' + '- Falla Componente Inventario\n')
+
+    # Check if the component is "Producto" and reset the state health counter if it is
+    if Component == 'Produc':
+        ComponentPHealth = 0
+
+
+    # If the state health counter for the "Producto" component exceeds a threshold ,
+    # write a log message indicating a failure in the product component
+    if ProductoComponentHealth > 6:
+        with open('logComponenteProducto.txt', 'a+') as file:
+            file.write('[' + str(datetime.now()) + ']' + '- Falla Componente Producto\n')
+    
     # Print a message indicating the client that sent the heartbeat
-    print('Hola Esto es cliente: ', cliente)
+    print(cliente)
