@@ -1,0 +1,21 @@
+[2023-02-26 10:14:52.592844]- Falla Componente Inventario
+[2023-02-26 10:14:52.593073]- Falla Componente Inventario
+[2023-02-26 10:14:52.627719]- Falla Componente Inventario
+[2023-02-26 10:14:52.627795]- Falla Componente Inventario
+[2023-02-26 10:14:52.640954]- Falla Componente Inventario
+[2023-02-26 10:14:52.654026]- Falla Componente Inventario
+[2023-02-26 10:14:52.667419]- Falla Componente Inventario
+
+[2023-02-26 10:40:20.296314]- Falla Componente Inventario
+[2023-02-26 10:40:22.772199]- Falla Componente Inventario
+[2023-02-26 10:40:25.303785]- Falla Componente Inventario
+[2023-02-26 10:40:27.779645]- Falla Componente Inventario
+[2023-02-26 10:40:30.317240]- Falla Componente Inventario
+[2023-02-26 10:40:32.787793]- Falla Componente Inventario
+[2023-02-26 10:40:35.319966]- Falla Componente Inventario
+[2023-02-26 10:40:37.795952]- Falla Componente Inventario
+[2023-02-26 10:40:40.328200]- Falla Componente Inventario
+[2023-02-26 10:40:42.804121]- Falla Componente Inventario
+[2023-02-26 10:40:45.336049]- Falla Componente Inventario
+[2023-02-26 10:40:47.807788]- Falla Componente Inventario
+[2023-02-26 10:40:50.343783]- Falla Componente Inventario
