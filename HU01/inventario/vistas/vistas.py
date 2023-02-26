@@ -35,7 +35,7 @@ class VistaTablaInventario(Resource):
         information = {}
         results = []
         inventario = result.get()
-        # l = ['Agua', 'manzanas']
+        # l = ['agua', 'manzanas']
         # item1 = 0
         # item = 0
         # count = 0
