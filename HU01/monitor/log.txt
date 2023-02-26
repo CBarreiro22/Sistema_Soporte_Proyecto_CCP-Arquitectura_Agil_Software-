@@ -547,3 +547,6 @@
 [2023-02-25 20:52:36.743298]- Falla en la cola de conexion entre inventario/producto
 [2023-02-25 20:52:41.362804]- Falla en la cola de conexion entre inventario/producto
 [2023-02-25 20:52:46.370198]- Falla en la cola de conexion entre inventario/producto
+[2023-02-26 00:10:28.315739]- Falla en la cola de conexion entre inventario/producto
+[2023-02-26 00:10:28.321868]- Falla en la cola de conexion entre inventario/producto
+[2023-02-26 00:10:28.331688]- Falla en la cola de conexion entre inventario/producto
