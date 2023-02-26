@@ -1,0 +1,18 @@
+
+[2023-02-25 20:20:56.417790]- Falla Componente Producto
+[2023-02-25 20:20:56.427509]- Falla Componente Producto
+[2023-02-25 20:20:56.437874]- Falla Componente Producto
+[2023-02-25 20:20:56.448468]- Falla Componente Producto
+[2023-02-25 20:20:56.448770]- Falla Componente Producto
+[2023-02-25 20:20:56.458551]- Falla Componente Producto
+[2023-02-25 20:20:56.458593]- Falla Componente Producto
+[2023-02-25 20:20:56.468420]- Falla Componente Producto
+[2023-02-25 20:20:56.469718]- Falla Componente Producto
+[2023-02-25 20:20:56.479714]- Falla Componente Producto
+[2023-02-25 20:49:26.234997]- Falla Componente Producto
+[2023-02-25 20:49:26.252092]- Falla Componente Producto
+[2023-02-25 20:49:26.252089]- Falla Componente Producto
+[2023-02-25 20:49:26.266120]- Falla Componente Producto
+[2023-02-25 20:49:26.266465]- Falla Componente Producto
+[2023-02-25 20:49:26.280142]- Falla Componente Producto
+[2023-02-25 20:49:26.295058]- Falla Componente Producto
