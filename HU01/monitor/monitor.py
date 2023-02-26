@@ -25,12 +25,10 @@ def enviar_estado_salud(cliente):
     Component = cliente[27]+cliente[28]+cliente[29]+cliente[30]+cliente[31]+cliente[32]
 
     # Increment the state health counter for the relevant component
-    ProductoComponentHealth = ProductoComponentHealth+ 1
-    print(ProductoComponentHealth)
+    ProductoComponentHealth = ProductoComponentHealth + 1
 
      # Increment the state health counter for the relevant component
     contStatehealthComponentI += 1
-    print(contStatehealthComponentI)
 
     # Check if the heartbeat message is a Request Inventario message
     if(cliente == '********* Request Inventario *********'):
@@ -68,12 +66,12 @@ def enviar_estado_salud(cliente):
 
     # Check if the component is "Producto" and reset the state health counter if it is
     if Component == 'Produc':
-        ComponentPHealth = 0
+        ProductoComponentHealth = 0
 
 
     # If the state health counter for the "Producto" component exceeds a threshold ,
     # write a log message indicating a failure in the product component
-    if ProductoComponentHealth > 6:
+    if ProductoComponentHealth> 6:
         with open('logComponenteProducto.txt', 'a+') as file:
             file.write('[' + str(datetime.now()) + ']' + '- Falla Componente Producto\n')
     
