@@ -13,4 +13,3 @@ class MonitorSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Monitor
         load_instance = True
-    precio = fields.String()

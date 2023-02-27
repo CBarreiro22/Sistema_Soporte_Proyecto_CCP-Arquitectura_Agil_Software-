@@ -1,5 +1,3 @@
-from threading import Thread
-from HU01.monitor.tareas.monitor import enviar_estado_salud
 from producto import create_app, heartbeat
 from .modelos import db
 from flask_restful import Api

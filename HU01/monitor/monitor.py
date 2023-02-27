@@ -5,13 +5,13 @@ from celery import Celery
 from celery.signals import task_postrun
 from flask.globals import current_app
 from flask_sqlalchemy import SQLAlchemy
-from ..modelos import MonitorSchema,db
+#from .modelos import MonitorSchema,db
 
-from ..modelos import Monitor
+from .modelos import Monitor
 
 
 
-monitor_schema = MonitorSchema()
+#monitor_schema = MonitorSchema()
 
 
 # Import the Celery library and set up a broker connection
