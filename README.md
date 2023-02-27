@@ -5,8 +5,10 @@
 
 
 ## HU01
+[Enlace](https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-/issues/1)
 
 ### Video
+[Enlace]()
 
 ### Detección de falla de los microservicios Inventario y Producto mediante componente Monitor
 
@@ -66,6 +68,10 @@
 #### Notas
 
 ## HU02
+[Enlace](https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-/issues/2)
+
+### Video
+[Enlace](https://uniandes-my.sharepoint.com/personal/i_oliva_uniandes_edu_co/_layouts/15/stream.aspx?id=%2Fpersonal%2Fi%5Foliva%5Funiandes%5Fedu%5Fco%2FDocuments%2FArquitecturas%20agiles%2FSemana%205%2FDemo%20experimento%2Emp4&ga=1)
 
 #### Pasos para probar el experimento:
 1. Configurar el venv 
