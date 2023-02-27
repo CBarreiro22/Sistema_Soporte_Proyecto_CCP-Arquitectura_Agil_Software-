@@ -1,0 +1,5 @@
+[2023-02-26 19:03:10.057299]- Falla Componente Producto
+[2023-02-26 19:03:20.069067]- Falla Componente Producto
+[2023-02-26 19:03:30.078270]- Falla Componente Producto
+[2023-02-26 19:45:52.294752]- Falla Componente Producto
+[2023-02-26 19:46:23.301131]- Falla Componente Producto
