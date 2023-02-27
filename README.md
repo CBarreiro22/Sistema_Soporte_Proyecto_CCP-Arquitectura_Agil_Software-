@@ -9,6 +9,9 @@ Vista funcional sistema CCP
 # Detección de falla de los microservicios Inventario y Producto mediante componente Monitor
 
 ## Táctica: Heartbeat 
+
+## Video
+
 ## Pasos para probar el experimento:
 * Abrir una terminal de windows/terminal de comandos, ubicarse dentro de la carpeta HU01 del proyecto recién clonado y crear el ambiente virtual de python mediante la siguiente instrucción ``` python3 -m venv env```
 * Una vez creado el ambiente, proceder con la activación del ambiente mediante el comando ```source venv/bin/activate```
@@ -35,6 +38,9 @@ Vista funcional sistema CCP
 # Detección de falla de la cola de mensajes invetario-producto mediante componente Monitor
 
 ## Táctica: Heartbeat 
+
+## Video
+
 ## Pasos para probar el experimento:
 * Abrir una terminal de windows/terminal de comandos, ubicarse dentro de la carpeta HU01 del proyecto recién clonado y crear el ambiente virtual de python mediante la siguiente instrucción ``` python3 -m venv env```
 * Una vez creado el ambiente, proceder con la activación del ambiente mediante el comando ```source venv/bin/activate```
