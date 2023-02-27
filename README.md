@@ -10,15 +10,15 @@
 
 
 
-mac
-```console
-python3 app.py
-```
-windows
-```console
-python app.py
-```
-una vez iniciados Inventario, Orden Venta, monitor y API Gateway
+    mac
+    ```console
+    python3 app.py
+    ```
+    windows
+    ```console
+    python app.py
+    ```
+    una vez iniciados Inventario, Orden Venta, monitor y API Gateway
 
 4. Correr el llamado API de postman
 [Postman Collection](https://documenter.getpostman.com/view/23921893/2s93CPrYR2)
