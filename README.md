@@ -3,8 +3,7 @@
 ![image](https://user-images.githubusercontent.com/94886747/221454198-6c664eb2-00ae-4e3a-976b-5fa8485dbdb9.png)
 Vista funcional sistema CCP
 
-## Video
-
+# Video
 
 # Clonar repositorio:
 > git clone https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-
