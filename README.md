@@ -12,5 +12,7 @@ windows
 ```console
 python3 app.py
 ```
+una vez iniciados Inventario, Orden Venta, monitor y API Gateway
+
 Correr el llamado API de postman
 [Postman Collection](https://documenter.getpostman.com/view/23921893/2s93CPrYR2)
