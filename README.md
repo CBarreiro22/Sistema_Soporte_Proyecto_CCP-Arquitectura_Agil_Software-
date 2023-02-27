@@ -8,7 +8,7 @@
 [Enlace](https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-/issues/1)
 
 ### Video
-[Enlace]()
+[Enlace](https://uniandes-my.sharepoint.com/personal/c_barreiroh_uniandes_edu_co/_layouts/15/stream.aspx?id=%2Fpersonal%2Fc%5Fbarreiroh%5Funiandes%5Fedu%5Fco%2FDocuments%2Fvideo1581746771%2Emp4&ga=1)
 
 ### Detección de falla de los microservicios Inventario y Producto mediante componente Monitor
 
