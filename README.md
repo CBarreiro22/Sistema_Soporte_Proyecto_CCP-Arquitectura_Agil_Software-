@@ -1,18 +1,24 @@
 # Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-
 
-Para correr HU02
+## Para correr HU02
 
-Ir a la carpeta HU02 y abrir cada carpeta en una consola separada. 
-## ejecutar proyecto en cada directorio.
+1. Configurar el venv 
+
+2. Ir a la carpeta HU02 y abrir cada carpeta en una consola separada. 
+
+3. Ejecutar proyecto en cada directorio.
+
+
+
 mac
 ```console
 python3 app.py
 ```
 windows
 ```console
-python3 app.py
+python app.py
 ```
 una vez iniciados Inventario, Orden Venta, monitor y API Gateway
 
-Correr el llamado API de postman
+4. Correr el llamado API de postman
 [Postman Collection](https://documenter.getpostman.com/view/23921893/2s93CPrYR2)
