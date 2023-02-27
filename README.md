@@ -61,6 +61,7 @@ Vista funcional sistema CCP
 * Se puede consultar el archivo de logs ```HU01/log.txt```
 
 <img width="1010" alt="image" src="https://user-images.githubusercontent.com/94886747/221461446-b1ea7a86-295b-4fa2-bad2-e43120f49ca7.png">
+<img width="1010" alt="image" src="https://user-images.githubusercontent.com/94886747/221461645-e5084537-b7ed-49d8-980e-19c44e295a54.png">
 <img width="1619" alt="image" src="https://user-images.githubusercontent.com/94886747/221454847-8d4cda11-f7c2-4bac-a7ce-5b8a1ffa4577.png">
 <img width="999" alt="image" src="https://user-images.githubusercontent.com/94886747/221454645-925f3758-b35a-40be-811d-49b844872875.png">
 
