@@ -28,4 +28,4 @@ def heartbeat():
         args = ('Estado de Salud Componente Producto | ' +
                 str(datetime.now()), )
         enviar_estado_salud.apply_async(args)
-        time.sleep(5)
+        time.sleep(10)

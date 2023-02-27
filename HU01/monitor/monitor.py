@@ -4,6 +4,15 @@ from sqlite3 import Date
 from celery import Celery
 from celery.signals import task_postrun
 from flask.globals import current_app
+from flask_sqlalchemy import SQLAlchemy
+#from .modelos import MonitorSchema,db
+
+from .modelos import Monitor
+
+
+
+#monitor_schema = MonitorSchema()
+
 
 # Import the Celery library and set up a broker connection
 monitor = Celery(__name__, broker='redis://localhost:6379/2')
@@ -52,6 +61,9 @@ def enviar_estado_salud(cliente):
     if(count > 3):
         with open('log.txt', 'a+') as file:
             file.write('[' + str(datetime.now()) + ']' + '- Falla en la cola de conexion entre inventario/producto\n')
+        nuevoMonitor = Monitor(mensaje='Falla en la cola de conexion entre inventario/producto',hora=str(datetime.now()))
+        """ db.session.add(nuevoMonitor)
+        db.session.commit() """
 
     # Check if the component is "Inventario" and reset the state health counter if it is
     if Component == 'Invent':
@@ -63,6 +75,12 @@ def enviar_estado_salud(cliente):
     if contStatehealthComponentI > 6:
         with open('logComponenteInventario.txt', 'a+') as file:
             file.write('[' + str(datetime.now()) + ']' + '- Falla Componente Inventario\n')
+        nuevoMonitor = Monitor(mensaje='Falla Componente Inventario',hora=str(datetime.now()))
+        """ db.session.add(nuevoMonitor)
+        db.session.commit() """
+        
+        
+
 
     # Check if the component is "Producto" and reset the state health counter if it is
     if Component == 'Produc':
@@ -74,6 +92,13 @@ def enviar_estado_salud(cliente):
     if ProductoComponentHealth> 6:
         with open('logComponenteProducto.txt', 'a+') as file:
             file.write('[' + str(datetime.now()) + ']' + '- Falla Componente Producto\n')
+        nuevoMonitor = Monitor(mensaje='Falla Componente Producto',hora=str(datetime.now()))
+        """ db.session.add(nuevoMonitor)
+        db.session.commit() """
+        print('Ingreso')
+    
+    
     
     # Print a message indicating the client that sent the heartbeat
     print(cliente)
+    
