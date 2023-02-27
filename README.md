@@ -1,8 +1,8 @@
 # Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-
 
-para correr HU02
+Para correr HU02
 
-ir a la carpeta HU02 y abrir cada carpeta en una consola separada. 
+Ir a la carpeta HU02 y abrir cada carpeta en una consola separada. 
 ## ejecutar proyecto en cada directorio.
 mac
 ```console
@@ -12,3 +12,5 @@ windows
 ```console
 python3 app.py
 ```
+Correr el llamado API de postman
+[Postman Collection](https://documenter.getpostman.com/view/23921893/2s93CPrYR2)
