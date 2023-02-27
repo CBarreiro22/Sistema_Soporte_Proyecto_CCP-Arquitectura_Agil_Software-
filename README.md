@@ -3,14 +3,15 @@
 ![image](https://user-images.githubusercontent.com/94886747/221454198-6c664eb2-00ae-4e3a-976b-5fa8485dbdb9.png)
 Vista funcional sistema CCP
 
+## Video
+
+
 # Clonar repositorio:
 > git clone https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-
 
 # Detección de falla de los microservicios Inventario y Producto mediante componente Monitor
 
 ## Táctica: Heartbeat 
-
-## Video
 
 ## Pasos para probar el experimento:
 * Abrir una terminal de windows/terminal de comandos, ubicarse dentro de la carpeta HU01 del proyecto recién clonado y crear el ambiente virtual de python mediante la siguiente instrucción ``` python3 -m venv env```
@@ -26,7 +27,7 @@ Vista funcional sistema CCP
 ## Resultados
 * Se puede consultar los archivos logs ```HU01/logComponenteProducto.txt``` y ```HU01/logComponenteInventario.txt```
 
-<img width="1619" alt="image" src="https://user-images.githubusercontent.com/94886747/221454847-8d4cda11-f7c2-4bac-a7ce-5b8a1ffa4577.png">
+<img width="1010" alt="image" src="https://user-images.githubusercontent.com/94886747/221461249-685dbe06-76e9-4c48-ae15-8cb7a642d7f3.png">
 <img width="999" alt="image" src="https://user-images.githubusercontent.com/94886747/221454486-779054c8-34db-424e-bd74-712f3167c361.png">
 <img width="999" alt="image" src="https://user-images.githubusercontent.com/94886747/221454618-bac4f679-7452-433b-bee4-c9a796a768d5.png">
 
@@ -59,6 +60,9 @@ Vista funcional sistema CCP
 
 ## Resultados
 * Se puede consultar el archivo de logs ```HU01/log.txt```
+
+<img width="1010" alt="image" src="https://user-images.githubusercontent.com/94886747/221461446-b1ea7a86-295b-4fa2-bad2-e43120f49ca7.png">
+<img width="1619" alt="image" src="https://user-images.githubusercontent.com/94886747/221454847-8d4cda11-f7c2-4bac-a7ce-5b8a1ffa4577.png">
 <img width="999" alt="image" src="https://user-images.githubusercontent.com/94886747/221454645-925f3758-b35a-40be-811d-49b844872875.png">
 
 ## Notas
