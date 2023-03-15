@@ -28,7 +28,7 @@ class EnumADiccionario(fields.Field):
         return {"llave": value.name, "valor": value.value}
 
 
-class OrdenSchema(SQLAlchemyAutoSchema):
+class OrdenVentaSchema(SQLAlchemyAutoSchema):
     estado = EnumADiccionario(attribute=("estado"))
 
     class Meta:
