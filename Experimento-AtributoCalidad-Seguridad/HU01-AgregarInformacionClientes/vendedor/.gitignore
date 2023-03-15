@@ -145,14 +145,5 @@ cython_debug/
 
 #DataBase TEST
 test.db
-
-# MAC
-
-.DS_Store
-*.xml
-*.iml
-Experimento-AtributoCalidad-Disponibilidad/HU01/.idea/sonarlint/securityhotspotstore/8/3/83c0d5a16c0d79aba527eb1bf2c2bd589896dbe5
-Experimento-AtributoCalidad-Disponibilidad/HU01/.idea/sonarlint/securityhotspotstore/1/6/16b467a66b56a21b3054ec1b482dffc4841fa404
-*.pb
-Experimento-AtributoCalidad-Disponibilidad/HU01/.idea/sonarlint/issuestore/8/3/83c0d5a16c0d79aba527eb1bf2c2bd589896dbe5
-Experimento-AtributoCalidad-Disponibilidad/HU01/.idea/sonarlint/issuestore/1/6/16b467a66b56a21b3054ec1b482dffc4841fa404
+#pycharm
+.idea/*

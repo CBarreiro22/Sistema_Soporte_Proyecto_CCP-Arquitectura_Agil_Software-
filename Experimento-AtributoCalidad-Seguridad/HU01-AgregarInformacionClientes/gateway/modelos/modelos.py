@@ -5,18 +5,17 @@ from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 db = SQLAlchemy()
 
 
-class Producto(db.Model):
+class LogMonitor (db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(128))
-    existencia = db.Column(db.Numeric)
+    horaFecha = db.Column(db.String(15))
+    status = db.Column(db.String(15))
+    componente =  db.Column(db.String(15))
 
-
-class ProductoSchema(SQLAlchemyAutoSchema):
+class LogMonitorSchema(SQLAlchemyAutoSchema):
     class Meta:
-        model = Producto
+        model = LogMonitor
         include_relationships = False
         include_fk = False
         load_instance = True
 
     id = fields.String()
-    existencia = fields.String()

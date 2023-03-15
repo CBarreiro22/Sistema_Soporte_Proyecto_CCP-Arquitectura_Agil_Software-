@@ -1,14 +1,31 @@
-from gateway import create_app
-from .vistas import Gateway
+from flask import Flask
+from flask_cors import CORS
+from flask_jwt_extended import JWTManager
 from flask_restful import Api
 
-# Create a Flask application instance with a default configuration
-app = create_app('default')
+from modelos import db
+from vistas import \
+    Gateway
 
-# Create an application context and push it to the context stack
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dbapp.sqlite'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['JWT_SECRET_KEY'] = 'frase-secreta'
+app.config['PROPAGATE_EXCEPTIONS'] = True
+
 app_context = app.app_context()
 app_context.push()
 
-# Create a Flask-RESTful API instance and add a resource called "VistaTablaProductos"
+db.init_app(app)
+db.create_all()
+
+cors = CORS(app)
+
 api = Api(app)
-api.add_resource(Gateway, '/gateway/inventario/')
+api.add_resource(Gateway, '/gateway/orden/compra/<int:id_orden>')
+
+jwt = JWTManager(app)
+
+
+if __name__ == "__main__":
+    app.run(debug=False)
