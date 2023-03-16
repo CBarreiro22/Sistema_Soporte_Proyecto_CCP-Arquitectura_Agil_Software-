@@ -1,6 +1,4 @@
 import random
-import requests as requests
-from flask import request, jsonify
 from flask_restful import Resource
 from faker import Faker
 
