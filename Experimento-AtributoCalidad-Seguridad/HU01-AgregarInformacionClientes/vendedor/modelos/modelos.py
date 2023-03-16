@@ -5,15 +5,18 @@ from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 db = SQLAlchemy()
 
 
-class Producto(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(128))
-    existencia = db.Column(db.Numeric)
+class Cliente(db.Model):
+    id = db.Column(db.String(255), primary_key=True)
+    nombre_completo = db.Column(db.String(255))
+    email = db.Column(db.String(255))
+    direccion = db.Column(db.String(255))
+    numero_cuenta_banco =  db.Column(db.String(255))
+    RFC = db.Column(db.String(255))
 
 
 class ProductoSchema(SQLAlchemyAutoSchema):
     class Meta:
-        model = Producto
+        model = Cliente
         include_relationships = False
         include_fk = False
         load_instance = True
