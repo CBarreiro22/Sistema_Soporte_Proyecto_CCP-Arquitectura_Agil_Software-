@@ -5,17 +5,7 @@ from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 db = SQLAlchemy()
 
 
-class LogMonitor (db.Model):
+class Usuario(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    horaFecha = db.Column(db.String(15))
-    status = db.Column(db.String(15))
-    componente =  db.Column(db.String(15))
-
-class LogMonitorSchema(SQLAlchemyAutoSchema):
-    class Meta:
-        model = LogMonitor
-        include_relationships = False
-        include_fk = False
-        load_instance = True
-
-    id = fields.String()
+    usuario = db.Column(db.String(50))
+    contrasena = db.Column(db.String(50))
