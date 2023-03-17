@@ -2,6 +2,8 @@ import enum
 from marshmallow import fields
 from flask_sqlalchemy import SQLAlchemy
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
+import datetime
+from sqlalchemy import DateTime
 
 db = SQLAlchemy()
 
@@ -17,7 +19,7 @@ class Estado(enum.Enum):
 class OrdenVenta(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     direccionEnvio = db.Column(db.String(128))
-    fecha = db.Column(db.DateTime)
+    fecha = db.Column(DateTime, default=datetime.datetime.utcnow)
     estado = db.Column(db.Enum(Estado))
 
 

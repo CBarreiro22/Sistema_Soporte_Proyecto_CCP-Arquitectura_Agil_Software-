@@ -20,8 +20,7 @@ class VistaOrdenesVentas(Resource):
     def post(self):
         args = ('********* Nuevo Orden Venta *********',)
         enviar_accion.apply_async(args)
-        nueva_orden = OrdenVenta(direccionEnvio=request.json["direccionEnvio"], fecha=request.json["fecha"],
-                                 estado=request.json["estado"])
+        nueva_orden = OrdenVenta(direccionEnvio=request.json["direccionEnvio"], estado=request.json["estado"])
         db.session.add(nueva_orden)
         db.session.commit()
         return orden_venta_schema.dump(nueva_orden)

@@ -33,7 +33,7 @@ class VistaMonitor(Resource):
             time.sleep(5)
 
     def orden_venta_ping(self, estado_actual_venta, estado_anterior_orden_venta):
-        componente_orden_venta = "orden-venta"
+        componente_orden_venta = "ordenVenta"
         if estado_actual_venta != estado_anterior_orden_venta:
             date_string_ordern_venta = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             if estado_actual_venta:

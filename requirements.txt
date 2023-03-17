@@ -1,7 +1,9 @@
-flask
+flask~=2.2.3
 flask_restful
 flask-SQLAlchemy
 redis
-celery
+celery~=5.2.7
 marshmallow_sqlalchemy
-requests
+requests~=2.28.2
+SQLAlchemy~=2.0.6
+marshmallow~=3.19.0
