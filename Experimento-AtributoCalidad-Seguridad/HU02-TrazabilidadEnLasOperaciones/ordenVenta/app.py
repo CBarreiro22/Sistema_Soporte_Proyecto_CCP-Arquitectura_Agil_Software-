@@ -13,7 +13,7 @@ db.create_all()
 
 api = Api(app)
 api.add_resource(VistaOrdenesVentas, '/ordenesventa')
-api.add_resource(VistaOrdenVenta, '/ordenventa/<int:id_cancion>')
+api.add_resource(VistaOrdenVenta, '/ordenventa/<int:id_ordenVenta>')
 
 
 # jwt = JWTManager(app)

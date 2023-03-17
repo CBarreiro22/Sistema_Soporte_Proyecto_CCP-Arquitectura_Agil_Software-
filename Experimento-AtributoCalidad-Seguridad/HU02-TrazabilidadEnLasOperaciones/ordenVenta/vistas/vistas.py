@@ -10,7 +10,7 @@ orden_venta_schema = OrdenVentaSchema()
 queque = Celery(__name__, broker='redis://localhost:6379')
 
 
-@queque.task(name="monitor_heartbeat")
+@queque.task(name="monitor_accion")
 def enviar_accion(cliente):
     pass
 
@@ -39,7 +39,6 @@ class VistaOrdenVenta(Resource):
         enviar_accion.apply_async(args)
         ordenVenta = OrdenVenta.query.get_or_404(id_ordenVenta)
         ordenVenta.direccionEnvio = request.json.get("direccionEnvio", ordenVenta.direccionEnvio)
-        ordenVenta.fecha = request.json.get("fecha", ordenVenta.fecha)
         ordenVenta.estado = request.json.get("estado", ordenVenta.estado)
         db.session.commit()
         return orden_venta_schema.dump(ordenVenta)
