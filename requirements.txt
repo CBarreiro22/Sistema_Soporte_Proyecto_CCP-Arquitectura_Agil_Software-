@@ -1,6 +1,6 @@
 flask~=2.2.3
 flask_restful
-flask-SQLAlchemy
+flask-SQLAlchemy==3.0.3
 redis
 celery~=5.2.7
 marshmallow_sqlalchemy
