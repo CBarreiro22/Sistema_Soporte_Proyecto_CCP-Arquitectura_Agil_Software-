@@ -7,7 +7,7 @@ from flask_jwt_extended import jwt_required, create_access_token
 
 orden_venta_schema = OrdenVentaSchema()
 
-queque = Celery(__name__, broker='redis://localhost:6379/2')
+queque = Celery(__name__, broker='redis://localhost:6379')
 
 
 @queque.task(name="monitor_heartbeat")
@@ -18,7 +18,7 @@ def enviar_accion(cliente):
 class VistaOrdenesVentas(Resource):
 
     def post(self):
-        args = ('********* Nuevo Orden Venat *********',)
+        args = ('********* Nuevo Orden Venta *********',)
         enviar_accion.apply_async(args)
         nueva_orden = OrdenVenta(direccionEnvio=request.json["direccionEnvio"], fecha=request.json["fecha"],
                                  estado=request.json["estado"])
