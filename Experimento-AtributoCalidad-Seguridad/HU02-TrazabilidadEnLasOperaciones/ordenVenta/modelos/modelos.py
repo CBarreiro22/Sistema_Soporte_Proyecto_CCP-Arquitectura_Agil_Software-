@@ -19,6 +19,8 @@ class Estado(enum.Enum):
 class OrdenVenta(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     direccionEnvio = db.Column(db.String(128))
+    monto = db.Column(db.integer)
+    usuario = db.Column(db.String(128))
     fecha = db.Column(DateTime, default=datetime.datetime.utcnow)
     estado = db.Column(db.Enum(Estado))
 
