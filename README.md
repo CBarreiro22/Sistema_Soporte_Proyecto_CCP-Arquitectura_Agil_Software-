@@ -117,7 +117,8 @@
 [Enlace](https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-/issues/21)
 
 ### Video
-[Video]()
+
+[Video](https://user-images.githubusercontent.com/111206402/226113197-27a0fa60-0d80-4d70-a849-29ecc9c626be.mp4)
 
 ### Descripción de experimento para Integridad
 
