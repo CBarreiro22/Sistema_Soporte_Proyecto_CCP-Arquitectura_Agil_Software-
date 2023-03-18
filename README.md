@@ -122,14 +122,17 @@
 ### Descripción de experimento para Integridad
 
 #### Tácticas: Recuperarse de ataques (Manejo de logs de eventos y Autenticación)
+    
+#### Proposito del experimento
+Detectar las acciones que se realizan en las ordenes de compras realizadas en la aplicación. Con el motivo de evitar fraude en el momento de que se realicen las ordenes de compra.
 
 #### Pasos para probar el experimento:
 * Abrir una terminal de windows/terminal de comandos, ubicarse dentro de la carpeta HU01 del proyecto recién clonado y crear el ambiente virtual de python mediante la siguiente instrucción ``` python3 -m venv env```
 * Una vez creado el ambiente, proceder con la activación del ambiente mediante el comando ```source venv/bin/activate```
 * Instalar las dependencias para este proyecto mediante el siguiente comando ```pip install -r requirements.txt```
 * Abrir una nueva terminal de comandos e iniciar el servidor redis mediante el comando ```redis-server```
-* Abrir una nueva terminal de comandos y desplegar la cola de mensajes monitor, ingresamos al directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones``` y ejecutamos el siguiente comando ```celery -A auditoria.queque worker -l info```
-* Abrir una nueva terminal de comandos y desplegar la cola de mensajes inventario-producto, ingresar dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/ordenVenta``` y ejecutar el siguiente comando ```flask run```
+* Abrir una nueva terminal de comandos y desplegar la cola de mensajes Auditoria, ingresamos al directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones``` y ejecutamos el siguiente comando ```celery -A auditoria.queque worker -l info```
+* Abrir una nueva terminal de comandos y desplegar el microservicio ordenVenta, ingresar dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/ordenVenta``` y ejecutar el siguiente comando ```flask run```
 * Abrir una nueva terminal de comandos y desplegar el gateway , ingresando dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/gateway``` y ejecutar el comando ```flask run -p 5001```
 * Abrir postman y realizar una petición ```POST``` para generar el token de Autenticación en la siguiente dirección ```http://127.0.0.1:5001/gateway/login```
     * En el cuerpo del request indicar la siguiente información:
@@ -137,7 +140,7 @@
     "usuario":"Usuario1234",
     "password":"pa55woRd$123"
     }
-* Abrir postman y realizar una petición ```POST``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/```
+* Abrir postman y realizar una petición ```POST``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta```
     * Del token generado en el login, copiarlo e pegarlo en la Autorización del Bearer Token de este request.
     * En el cuerpo del request indicar la siguiente información:
     {
@@ -196,6 +199,8 @@
 <img width="1580" alt="image" src="https://user-images.githubusercontent.com/94886747/226082211-6fb2c4c2-d000-4855-b989-39344019d5dd.png">
 
 #### Notas
+
+Las bases de datos se encuentran en la carpeta instance.
     
 </details>
 
