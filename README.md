@@ -131,7 +131,7 @@
 * Abrir una nueva terminal de comandos y desplegar la cola de mensajes monitor, ingresamos al directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones``` y ejecutamos el siguiente comando ```celery -A auditoria.queque worker -l info```
 * Abrir una nueva terminal de comandos y desplegar la cola de mensajes inventario-producto, ingresar dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/ordenVenta``` y ejecutar el siguiente comando ```flask run```
 * Abrir una nueva terminal de comandos y desplegar el gateway , ingresando dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/gateway``` y ejecutar el comando ```flask run -p 5001```
-* Abrir postman y realizar una petición ```get``` a la siguiente dirección ```http://127.0.0.1:5001/gateway/inventario/```
+* Abrir postman y realizar una petición ```get``` a la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/```
 * Los resultados de consulta de productos se mostrarán en la respuesta de la petición postman
 * Ir a la terminal donde fue desplegado la cola de mensajes invetario-producto y presionar las teclas ```Ctrl + C``` para detener la cola.
 * Abrir postman y realizar una petición ```get``` a la siguiente dirección ```http://127.0.0.1:5001/gateway/inventario/```
