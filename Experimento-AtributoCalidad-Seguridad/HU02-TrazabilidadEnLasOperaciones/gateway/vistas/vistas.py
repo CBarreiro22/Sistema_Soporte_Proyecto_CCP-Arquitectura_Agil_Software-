@@ -37,4 +37,4 @@ class Gateway(Resource):
     def delete(self, id_orden_venta):
         response = requests.delete(
             url=servicios['orden-venta']+str(id_orden_venta), json=request.json)
-        return '', 204
+        return 'Orden venta eliminado correctamente', 200
