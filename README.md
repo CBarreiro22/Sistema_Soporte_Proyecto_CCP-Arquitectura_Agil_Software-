@@ -121,7 +121,7 @@
 
 ### Descripción de experimento para Integridad
 
-#### Tácticas: Recuperarse de ataques (Manejo de logs de eventos y Autenticación)
+#### Tácticas: Recuperarse de ataques (Manejo de logs de eventos) y resistencia de ataque (Autenticación)
     
 #### Proposito del experimento
 Detectar las acciones que se realizan en las ordenes de compras realizadas en la aplicación. Con el motivo de evitar fraude en el momento de que se realicen las ordenes de compra.
