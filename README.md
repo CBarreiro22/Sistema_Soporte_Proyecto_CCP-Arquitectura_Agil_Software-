@@ -122,6 +122,9 @@
 ### Descripción de experimento para Integridad
 
 #### Tácticas: Recuperarse de ataques (Manejo de logs de eventos y Autenticación)
+    
+#### Proposito del experimento
+Detectar las acciones que se realizan en las ordenes de compras realizadas en la aplicación. Con el motivo de evitar fraude en el momento de que se realicen las ordenes de compra.
 
 #### Pasos para probar el experimento:
 * Abrir una terminal de windows/terminal de comandos, ubicarse dentro de la carpeta HU01 del proyecto recién clonado y crear el ambiente virtual de python mediante la siguiente instrucción ``` python3 -m venv env```
