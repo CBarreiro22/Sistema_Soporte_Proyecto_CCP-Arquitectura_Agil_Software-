@@ -131,31 +131,42 @@
 * Abrir una nueva terminal de comandos y desplegar la cola de mensajes monitor, ingresamos al directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones``` y ejecutamos el siguiente comando ```celery -A auditoria.queque worker -l info```
 * Abrir una nueva terminal de comandos y desplegar la cola de mensajes inventario-producto, ingresar dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/ordenVenta``` y ejecutar el siguiente comando ```flask run```
 * Abrir una nueva terminal de comandos y desplegar el gateway , ingresando dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/gateway``` y ejecutar el comando ```flask run -p 5001```
-* Abrir postman y realizar una petición ```post``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/```
+* Abrir postman y realizar una petición ```post``` para generar el token de Autenticación en la siguiente dirección ```http://127.0.0.1:5001/gateway/login```
     * En el cuerpo del request indicar la siguiente información:
-{
-    "direccionEnvio":"mi dirección de envío",
-    "estado":"CREADO",
-    "monto":123456.78,
-    "usuario":"Juan Perez"
-}
+    {
+    "usuario":"Usuario1234",
+    "password":"pa55woRd$123"
+    }
+* Abrir postman y realizar una petición ```post``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/```
+    * Del token generado en el login, copiarlo e pegarlo en la Autorización del Bearer Token de este request.
+    * En el cuerpo del request indicar la siguiente información:
+    {
+        "direccionEnvio":"mi dirección de envío",
+        "estado":"CREADO",
+        "monto":123456.78,
+        "usuario":"Juan Perez"
+    }
 * Abrir postman y realizar una petición ```put``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/[id]```
     * Remplazar [id] con el que devolvió el post.
+    * Del token generado en el login, copiarlo e pegarlo en la Autorización del Bearer Token de este request.
     * En el cuerpo del request indicar la siguiente información de actualización:
-{
-    "direccionEnvio":"mi dirección de envío nuevo",
-    "estado":"CANCELADO",
-    "monto":876543.21,
-    "usuario":"Juan Perez Sánchez"
-}
+    {
+        "direccionEnvio":"mi dirección de envío nuevo",
+        "estado":"CANCELADO",
+        "monto":876543.21,
+        "usuario":"Juan Perez Sánchez"
+    }
 * Abrir postman y realizar una petición ```delete``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/[id]```
     * Remplazar [id] con el que devolvió el post.
+    * Del token generado en el login, copiarlo e pegarlo en la Autorización del Bearer Token de este request.
     * En el cuerpo del request indicar la siguiente información de actualización:
 {
     "usuario":"Juan Perez Sánchez"
 }
 
 #### Resultados
+* Evidencia Autenticación requerida en el Gateway:
+<img width="1633" alt="image" src="https://user-images.githubusercontent.com/94886747/226084064-2a905d60-2d7a-4819-9ba2-73fe4b24d9f8.png">
 
 * Creación de orden de venta:
 <img width="1624" alt="image" src="https://user-images.githubusercontent.com/94886747/226081638-833c2852-fce6-4f2a-8ec7-62a0f735ec6e.png">
