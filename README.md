@@ -6,7 +6,7 @@
 ## Experimento Atributo de Calidad Disponibilidad
 
 <details>
-<summary>HU01</summary>
+<summary>HU01 - Visualizacion de Productos</summary>
 
 ### Enlace
 [Enlace](https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-/issues/1)
@@ -73,7 +73,7 @@
 </details>
 
 <details>
-<summary>HU02</summary>
+<summary>HU02 - Recepcion de pedidos</summary>
 
 ### Enlace
 [Enlace](https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-/issues/2)
