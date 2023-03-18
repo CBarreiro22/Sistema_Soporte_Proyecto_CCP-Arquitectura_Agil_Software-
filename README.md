@@ -137,7 +137,7 @@
     "usuario":"Usuario1234",
     "password":"pa55woRd$123"
     }
-* Abrir postman y realizar una petición ```POST``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/```
+* Abrir postman y realizar una petición ```POST``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta```
     * Del token generado en el login, copiarlo e pegarlo en la Autorización del Bearer Token de este request.
     * En el cuerpo del request indicar la siguiente información:
     {
