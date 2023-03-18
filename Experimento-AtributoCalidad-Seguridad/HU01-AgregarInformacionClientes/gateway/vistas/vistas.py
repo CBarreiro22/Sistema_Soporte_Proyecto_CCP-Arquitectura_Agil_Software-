@@ -8,7 +8,7 @@ import hashlib
 
 
 servicios = {  # Configuración de servicios
-    'servicioVendedor': 'http://127.0.0.1:8090/register/data/user',
+    'servicioVendedor': 'http://127.0.0.1:8090/register/data/user/',
 }
 
 class VistaSignIn(Resource):

@@ -1,3 +1,4 @@
+from flask_jwt_extended import create_access_token, jwt_required
 import random
 import uuid
 
@@ -31,7 +32,7 @@ class utils ():
         print(f"Mensaje descifrado: {data_desencriptada}")
 
 class VistaCliente(Resource):
-
+    @jwt_required()
     def post(self,id_usuario):
         nombre_completo = utils.encriptar(request.json["nombre_completo"])
         email = utils.encriptar(request.json["email"])
