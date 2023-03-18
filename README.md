@@ -131,11 +131,24 @@
 * Abrir una nueva terminal de comandos y desplegar la cola de mensajes monitor, ingresamos al directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones``` y ejecutamos el siguiente comando ```celery -A auditoria.queque worker -l info```
 * Abrir una nueva terminal de comandos y desplegar la cola de mensajes inventario-producto, ingresar dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/ordenVenta``` y ejecutar el siguiente comando ```flask run```
 * Abrir una nueva terminal de comandos y desplegar el gateway , ingresando dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/gateway``` y ejecutar el comando ```flask run -p 5001```
-* Abrir postman y realizar una petición ```get``` a la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/```
-* Los resultados de consulta de productos se mostrarán en la respuesta de la petición postman
-* Ir a la terminal donde fue desplegado la cola de mensajes invetario-producto y presionar las teclas ```Ctrl + C``` para detener la cola.
-* Abrir postman y realizar una petición ```get``` a la siguiente dirección ```http://127.0.0.1:5001/gateway/inventario/```
-* Esperar unos momentos (1 minuto aproximandamente) y revisar que en el archivo de log, ```HU01/log.txt``` se haya registrado una entrada de falla de la cola de mensaje inventario-producto.
+* Abrir postman y realizar una petición ```post``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/```
+    * En el cuerpo del request indicar la siguiente información:
+{
+    "direccionEnvio":"mi dirección de envío",
+    "estado":"CREADO",
+    "monto":123456.78,
+    "usuario":"Juan Perez"
+}
+* Abrir postman y realizar una petición ```put``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/[id]```
+    * Remplazar [id] con el que devolvió el post.
+    * En el cuerpo del request indicar la siguiente información de actualización:
+{
+    "direccionEnvio":"mi dirección de envío nuevo",
+    "estado":"CANCELADO",
+    "monto":876543.21,
+    "usuario":"Juan Perez Sánchez"
+}
+* Abrir postman y realizar una petición ```delete``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/```
 
 #### Resultados
 
