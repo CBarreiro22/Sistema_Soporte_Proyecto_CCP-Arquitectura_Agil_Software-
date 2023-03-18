@@ -3,7 +3,7 @@
 ## Clonar repositorio:
 > git clone https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-
 
-## Experimento Atributo de Calidad Disponibilidad
+## Experimento 1 Atributo de Calidad Disponibilidad
 
 <details>
 <summary>HU01 - Visualizacion de Productos</summary>
@@ -104,7 +104,7 @@
 [Postman Collection](https://documenter.getpostman.com/view/23921893/2s93CPrYR2)
 </details>
 
-## Experimento Atributo de Calidad Seguridad
+## Experimento 2 Atributo de Calidad Seguridad
 
 <details>
 <summary>HU01 - Agregar Información Clientes</summary>
