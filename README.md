@@ -169,7 +169,7 @@
 <img width="1633" alt="image" src="https://user-images.githubusercontent.com/94886747/226084064-2a905d60-2d7a-4819-9ba2-73fe4b24d9f8.png">
 
 * Creación de orden de venta:
-<img width="1624" alt="image" src="https://user-images.githubusercontent.com/94886747/226081638-833c2852-fce6-4f2a-8ec7-62a0f735ec6e.png">
+<img width="1633" alt="image" src="https://user-images.githubusercontent.com/94886747/226084347-e1dfaca8-e533-4691-9ea6-10b4dc03a1d1.png">
 
 * Evidencia de creación:
 <img width="1366" alt="image" src="https://user-images.githubusercontent.com/94886747/226081969-d7f95fa4-44b8-47ea-b9ae-0e3ffa824cdd.png">
@@ -178,7 +178,7 @@
 <img width="1580" alt="image" src="https://user-images.githubusercontent.com/94886747/226082139-fed07b0a-f830-4160-aad7-1dab6c0f2d13.png">
     
 * Actualización de orden de venta:
-<img width="1624" alt="image" src="https://user-images.githubusercontent.com/94886747/226081769-3ec82a6b-e035-4e75-b8f4-33dff032545a.png">
+<img width="1633" alt="image" src="https://user-images.githubusercontent.com/94886747/226084386-6a0b4948-9af9-4f26-9a80-d5c6cc4bffc5.png">
 
 * Evidencia de actualización:
 <img width="1366" alt="image" src="https://user-images.githubusercontent.com/94886747/226082024-0202e2de-8352-42f1-8238-2806a818df1b.png">
@@ -187,7 +187,7 @@
 <img width="1580" alt="image" src="https://user-images.githubusercontent.com/94886747/226082065-ef77f5b7-7916-4481-8fea-d789a5350c85.png">
 
 * Eliminación de orden de venta:
-<img width="1624" alt="image" src="https://user-images.githubusercontent.com/94886747/226081798-77f8439e-f467-4647-8481-2ef665b15ad0.png">
+<img width="1633" alt="image" src="https://user-images.githubusercontent.com/94886747/226084409-64c11319-5b9f-474f-b538-938439e7b257.png">
 
 * Evidencia de eliminación:
 <img width="1580" alt="image" src="https://user-images.githubusercontent.com/94886747/226082196-d3343030-df6f-4fd9-bacc-32ae120220fd.png">
