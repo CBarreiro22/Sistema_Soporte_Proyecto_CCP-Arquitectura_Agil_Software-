@@ -1,41 +1,40 @@
+from operator import concat
+from flask_jwt_extended import create_access_token, jwt_required
 from flask_restful import Resource, abort
 import requests
 from requests import RequestException
+from flask import request
 
 servicios = {  # Configuración de servicios
-    'servicioInvetario': 'http://127.0.0.1:5000/inventario-productos',
+    'ordenes-venta': 'http://127.0.0.1:5000/ordenesventa',
+    'orden-venta': 'http://127.0.0.1:5000/ordenventa/'
 }
 
 
-class Gateway(Resource):
-    def get(self):
-        reintentosMaximo = 3
-        reintentoActual = 0
-        # 2 reintentos maximo
-        while reintentoActual < reintentosMaximo:
-            try:
-                response = requests.get(
-                    servicios['servicioInvetario'])  # Realizar solicitud al servicio1 y devolver respuesta
-                response.raise_for_status()
-                print(response)
-                if (response.status_code == 200):
-                    return response.json()
-                else:
-                    print(
-                        f"Ocurrió un error en la solicitud HTTP al servicio Inventario")
-                    reintentoActual = self.verificacionReintento(
-                        reintentoActual, reintentosMaximo)
-            except RequestException as e:
-                print(f"Ocurrió un except en la solicitud HTTP al servicio Inventario")
-                reintentoActual = self.verificacionReintento(
-                    reintentoActual, reintentosMaximo)
+class VistaSecurity(Resource):
 
-    def verificacionReintento(self, reintentoActual, reintentosMaximo):
-        reintentoActual = reintentoActual + 1
-        if reintentoActual < reintentosMaximo:
-            print(
-                f"Reintento: #{reintentoActual} petición servicio OrdenVenta")
-        else:
-            print("Maximo reintentos hechos.")
-            abort(500)
-        return reintentoActual
+    def post(self):
+        identity = concat(request.json["usuario"], request.json["password"])
+        token_de_acceso = create_access_token(identity=identity)
+        return {"token": token_de_acceso}
+
+
+class Gateway(Resource):
+
+    @jwt_required()
+    def post(self):
+        response = requests.post(
+            url=servicios['ordenes-venta'], json=request.json)
+        return response.json()
+
+    @jwt_required()
+    def put(self, id_orden_venta):
+        response = requests.put(
+            url=servicios['orden-venta']+str(id_orden_venta), json=request.json)
+        return response.json()
+
+    @jwt_required()
+    def delete(self, id_orden_venta):
+        response = requests.delete(
+            url=servicios['orden-venta']+str(id_orden_venta), json=request.json)
+        return '', 204

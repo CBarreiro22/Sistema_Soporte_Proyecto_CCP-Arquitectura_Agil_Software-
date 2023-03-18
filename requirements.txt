@@ -7,3 +7,6 @@ marshmallow_sqlalchemy
 requests~=2.28.2
 SQLAlchemy~=2.0.6
 marshmallow~=3.19.0
+Flask-JWT==0.2.0
+Flask-JWT-Extended==4.2.3
+PyJWT==2.1.0
