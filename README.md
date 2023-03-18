@@ -81,7 +81,8 @@
 ### Video
 [Enlace](https://uniandes-my.sharepoint.com/personal/i_oliva_uniandes_edu_co/_layouts/15/stream.aspx?id=%2Fpersonal%2Fi%5Foliva%5Funiandes%5Fedu%5Fco%2FDocuments%2FArquitecturas%20agiles%2FSemana%205%2FDemo%20experimento%2Emp4&ga=1)
 
-#### Pasos para probar el experimento:
+### Pasos para probar el experimento:
+    
 1. Configurar el venv 
 
 2. Ir a la carpeta HU02 y abrir cada carpeta en una consola separada. 
@@ -99,8 +100,7 @@
     python app.py
     ```
     
-* Una vez iniciados Inventario, Orden Venta, monitor y API Gateway usando el siguiente [postman collection](https://documenter.getpostman.com/view/24012106/2s93JzM1BZ): 
-registrar un usuario
+4. Una vez iniciados Inventario, Orden Venta, monitor y API Gateway 
 
 </details>
 
@@ -108,7 +108,9 @@ registrar un usuario
 
 <details>
 <summary>HU01 - Agregar Información Clientes</summary>
-    #### Pasos para probar el experimento:
+    
+    ### Pasos para probar el experimento:
+    
 1. Configurar el venv 
 
 2. Ejecutar proyecto en Experimento-AtributoCalidad-Seguridad/HU01-AgregarInformacionClientes/gateway y Experimento-AtributoCalidad-Seguridad/HU01-AgregarInformacionClientes/vendedor.
@@ -118,11 +120,23 @@ registrar un usuario
     ```console
     python3 app.py
     ```
+    
     windows
     ```console
     python app.py
     ```
-    Una vez iniciados vendedor y API Gateway
+    
+    Una vez iniciados vendedor y API Gateway usando el siguiente [postman collection](https://documenter.getpostman.com/view/24012106/2s93JzM1BZ): 
+registrar un usuario
+    
+    1.- Ejecutar signin
+    
+    2.- Ejecutar login y guardar en la variable token el token obtenido
+    
+    3.- ejecutar ApiGateway - post datos sensibles cliente
+    
+    3.- (opcional) ejecutar
+    
 </details>
 
 
