@@ -1,35 +1,21 @@
+import datetime
+from email.policy import default
 import enum
+from datetime import datetime
 from marshmallow import fields
 from flask_sqlalchemy import SQLAlchemy
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
+from sqlalchemy import DateTime
 
 db = SQLAlchemy()
 
 
-class Estado(enum.Enum):
-    CREADO = 1
-    MODIFICADO = 2
-    ELIMINADO = 3
-
-
 class Auditoria(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    idOrdenVenta = db.Column(db.Integer)
-    estadoAccion = db.Column(db.Enum(Estado))
-    fecha = db.Column(db.DateTime)
-
-
-class EnumADiccionario(fields.Field):
-    def _serialize(self, value, attr, obj, **kwargs):
-        if value is None:
-            return None
-        return {"llave": value.name, "valor": value.value}
-
-
-class AuditoriaSchema(SQLAlchemyAutoSchema):
-    estado = EnumADiccionario(attribute=("estado"))
-
-    class Meta:
-        model = Auditoria
-        include_relationships = True
-        load_instance = True
+    operacion = db.Column(db.String(128))
+    orden_venta_id = db.Column(db.String(128))
+    campo = db.Column(db.String(128))
+    valor_anterior = db.Column(db.String(128))
+    valor_nuevo = db.Column(db.String(128))
+    usuario = db.Column(db.String(128))
+    fecha = db.Column(DateTime, default=datetime.now())
