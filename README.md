@@ -3,8 +3,12 @@
 ## Clonar repositorio:
 > git clone https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-
 
+## Experimento Atributo de Calidad Disponibilidad
 
-## HU01
+<details>
+<summary>HU01</summary>
+
+### Enlace
 [Enlace](https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-/issues/1)
 
 ### Video
@@ -66,8 +70,12 @@
 <img width="999" alt="image" src="https://user-images.githubusercontent.com/94886747/221454645-925f3758-b35a-40be-811d-49b844872875.png">
 
 #### Notas
+</details>
 
-## HU02
+<details>
+<summary>HU02</summary>
+
+### Enlace
 [Enlace](https://github.com/CBarreiro22/Sistema_Soporte_Proyecto_CCP-Arquitectura_Agil_Software-/issues/2)
 
 ### Video
@@ -94,3 +102,19 @@
 
 4. Correr el llamado API de postman
 [Postman Collection](https://documenter.getpostman.com/view/23921893/2s93CPrYR2)
+</details>
+
+## Experimento Atributo de Calidad Seguridad
+
+<details>
+<summary>HU01 - Agregar Información Clientes</summary>
+</details>
+
+<details>
+<summary>HU02 - Trazabilidad En Las Operaciones</summary>
+</details>
+
+
+
+
+
