@@ -98,17 +98,34 @@
     ```console
     python app.py
     ```
-    Una vez iniciados Inventario, Orden Venta, monitor y API Gateway
+    
+* Una vez iniciados Inventario, Orden Venta, monitor y API Gateway usando el siguiente [postman collection](https://documenter.getpostman.com/view/24012106/2s93JzM1BZ): 
+registrar un usuario
 
-4. Correr el llamado API de postman
-[Postman Collection](https://documenter.getpostman.com/view/23921893/2s93CPrYR2)
 </details>
 
 ## Experimento 2 Atributo de Calidad Seguridad
 
 <details>
 <summary>HU01 - Agregar Información Clientes</summary>
+    #### Pasos para probar el experimento:
+1. Configurar el venv 
+
+2. Ejecutar proyecto en Experimento-AtributoCalidad-Seguridad/HU01-AgregarInformacionClientes/gateway y Experimento-AtributoCalidad-Seguridad/HU01-AgregarInformacionClientes/vendedor.
+
+
+    mac
+    ```console
+    python3 app.py
+    ```
+    windows
+    ```console
+    python app.py
+    ```
+    Una vez iniciados vendedor y API Gateway
 </details>
+
+
 
 <details>
 <summary>HU02 - Trazabilidad En Las Operaciones</summary>
