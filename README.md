@@ -199,6 +199,8 @@ Detectar las acciones que se realizan en las ordenes de compras realizadas en la
 <img width="1580" alt="image" src="https://user-images.githubusercontent.com/94886747/226082211-6fb2c4c2-d000-4855-b989-39344019d5dd.png">
 
 #### Notas
+
+Las bases de datos se encuentran en la carpeta instance.
     
 </details>
 
