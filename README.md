@@ -128,8 +128,8 @@
 * Una vez creado el ambiente, proceder con la activación del ambiente mediante el comando ```source venv/bin/activate```
 * Instalar las dependencias para este proyecto mediante el siguiente comando ```pip install -r requirements.txt```
 * Abrir una nueva terminal de comandos e iniciar el servidor redis mediante el comando ```redis-server```
-* Abrir una nueva terminal de comandos y desplegar la cola de mensajes monitor, ingresamos al directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones``` y ejecutamos el siguiente comando ```celery -A auditoria.queque worker -l info```
-* Abrir una nueva terminal de comandos y desplegar la cola de mensajes inventario-producto, ingresar dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/ordenVenta``` y ejecutar el siguiente comando ```flask run```
+* Abrir una nueva terminal de comandos y desplegar la cola de mensajes Auditoria, ingresamos al directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones``` y ejecutamos el siguiente comando ```celery -A auditoria.queque worker -l info```
+* Abrir una nueva terminal de comandos y desplegar el microservicio ordenVenta, ingresar dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/ordenVenta``` y ejecutar el siguiente comando ```flask run```
 * Abrir una nueva terminal de comandos y desplegar el gateway , ingresando dentro del directorio ```Experimento-AtributoCalidad-Seguridad/HU02-TrazabilidadEnLasOperaciones/gateway``` y ejecutar el comando ```flask run -p 5001```
 * Abrir postman y realizar una petición ```POST``` para generar el token de Autenticación en la siguiente dirección ```http://127.0.0.1:5001/gateway/login```
     * En el cuerpo del request indicar la siguiente información:
