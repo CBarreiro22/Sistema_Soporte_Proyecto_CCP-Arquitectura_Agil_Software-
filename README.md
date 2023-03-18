@@ -148,7 +148,12 @@
     "monto":876543.21,
     "usuario":"Juan Perez Sánchez"
 }
-* Abrir postman y realizar una petición ```delete``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/```
+* Abrir postman y realizar una petición ```delete``` para crear una nueva orden de venta en la siguiente dirección ```http://127.0.0.1:5001/gateway/orden-venta/[id]```
+    * Remplazar [id] con el que devolvió el post.
+    * En el cuerpo del request indicar la siguiente información de actualización:
+{
+    "usuario":"Juan Perez Sánchez"
+}
 
 #### Resultados
 
