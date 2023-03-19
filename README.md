@@ -137,6 +137,21 @@ registrar un usuario
     
     3.- (opcional) ejecutar
     
+    ### Resultados
+    
+    * evidencia de creación de usuario
+    <img width="1633" alt="image" src="https://user-images.githubusercontent.com/111364928/226146038-2c17b573-05d9-4800-becc-238c4a3254dc.png">
+    * evidencia de login
+    <img width="1633" alt="image" src="https://user-images.githubusercontent.com/111364928/226146051-e4ccb2c4-4069-4ab0-8f0b-a7d4b5944aa9.png">
+    * evidencia de creación de usuario desde vendedor
+    <img width="1633" alt="image" src="https://user-images.githubusercontent.com/111364928/226146081-23765424-2b7d-4c52-9b74-73661193cc0f.png">
+    * evidencia de datos encriptados en sqlite
+    <img width="1633" alt="image" src="https://user-images.githubusercontent.com/111364928/226146092-28a2fe19-16a3-4930-b072-c16e7e43d557.png">
+    
+    *video
+    [video](https://uniandes-my.sharepoint.com/:v:/g/personal/i_oliva_uniandes_edu_co/ET7qn7OMdEZGl1DOZ_nKO8ABPv7XyP4OnsrX783lsc4GBQ?e=bGlfKA)
+
+    
 </details>
 
 
